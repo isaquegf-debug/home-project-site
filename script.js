@@ -24,3 +24,17 @@ document.querySelectorAll(".quick-options button").forEach((button) => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+const floatingContact = document.querySelector(".floating-contact");
+const footer = document.querySelector(".site-footer");
+
+if (floatingContact && footer && "IntersectionObserver" in window) {
+  const footerObserver = new IntersectionObserver(
+    ([entry]) => {
+      floatingContact.classList.toggle("is-hidden", entry.isIntersecting);
+    },
+    { threshold: 0.08 }
+  );
+
+  footerObserver.observe(footer);
+}
