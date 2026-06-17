@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cartao digital de contato da Home Project com WhatsApp, Instagram, site e e-mail.">
+  <meta property="og:title" content="Home Project | Cartao de contato">
+  <meta property="og:description" content="Fale com a Home Project pelo WhatsApp, Instagram, site ou e-mail.">
+  <meta property="og:image" content="assets/home-project-logo.png">
+  <meta property="og:type" content="website">
+  <title>Home Project | Cartao de contato</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --grafite: #1E211F;
+      --marfim: #F2EFE8;
+      --papel: #FBFAF6;
+      --bronze: #A98868;
+      --oliva: #64705D;
+      --linha: #D9D2C5;
+      --verde: #1F7A4D;
+      --azul: #315F88;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      font-family: "DM Sans", Arial, sans-serif;
+      color: var(--grafite);
+      background:
+        linear-gradient(135deg, rgba(30, 33, 31, .92), rgba(100, 112, 93, .72)),
+        url("assets/hero-home-project.png") center / cover fixed;
+    }
+
+    main {
+      width: min(100%, 460px);
+      background: var(--papel);
+      border: 1px solid rgba(251, 250, 246, .42);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, .32);
+    }
+
+    header {
+      padding: 24px 22px 20px;
+      background: var(--grafite);
+      color: var(--papel);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 188px;
+      max-width: 72%;
+      height: auto;
+      display: block;
+    }
+
+    .status {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: #dcd4ca;
+      white-space: nowrap;
+    }
+
+    .status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #6ed08f;
+    }
+
+    .intro {
+      padding: 22px;
+      background: var(--marfim);
+      border-bottom: 1px solid var(--linha);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 30px;
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    .intro p {
+      margin: 0;
+      color: var(--oliva);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .chat {
+      display: grid;
+      gap: 12px;
+      padding: 20px 16px 18px;
+      background:
+        linear-gradient(180deg, rgba(251, 250, 246, .96), rgba(242, 239, 232, .98));
+    }
+
+    .bubble {
+      width: fit-content;
+      max-width: 90%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      line-height: 1.38;
+      box-shadow: 0 8px 18px rgba(30, 33, 31, .08);
+    }
+
+    .bubble.home {
+      background: var(--papel);
+      border: 1px solid var(--linha);
+    }
+
+    .bubble.client {
+      justify-self: end;
+      background: var(--grafite);
+      color: var(--papel);
+    }
+
+    .actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      min-height: 54px;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      color: var(--papel);
+      background: var(--grafite);
+      text-decoration: none;
+      font-weight: 700;
+      line-height: 1.2;
+      transition: transform .16s ease, filter .16s ease;
+    }
+
+    .action:hover,
+    .action:focus-visible {
+      transform: translateY(-1px);
+      filter: brightness(1.04);
+      outline: none;
+    }
+
+    .action svg {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+    }
+
+    .action span {
+      display: block;
+      font-size: 12px;
+      margin-top: 3px;
+      color: rgba(251, 250, 246, .78);
+      font-weight: 500;
+    }
+
+    .whatsapp { background: var(--verde); }
+    .instagram { background: linear-gradient(135deg, #8f3eb5, #c04b72 52%, #d99043); }
+    .site { background: var(--grafite); }
+    .email { background: var(--bronze); }
+    .phone { background: var(--azul); }
+    .contact { background: var(--oliva); }
+
+    .details {
+      display: grid;
+      gap: 10px;
+      padding: 18px 22px 22px;
+      border-top: 1px solid var(--linha);
+      background: var(--papel);
+    }
+
+    .line {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 14px;
+      line-height: 1.32;
+    }
+
+    .line strong {
+      color: var(--bronze);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .4px;
+    }
+
+    .line a {
+      color: var(--grafite);
+      text-align: right;
+      overflow-wrap: anywhere;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 15px 22px;
+      background: var(--grafite);
+      color: var(--papel);
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    @media (max-width: 390px) {
+      body { padding: 10px; }
+      header, .intro, .details, footer { padding-left: 16px; padding-right: 16px; }
+      h1 { font-size: 26px; }
+      .brand img { width: 156px; }
+      .status { display: none; }
+      .line { display: block; }
+      .line a { display: block; margin-top: 3px; text-align: left; }
+      footer { display: block; }
+      footer span { display: block; margin-top: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <main aria-label="Cartao digital de contato da Home Project">
+    <header>
+      <div class="brand">
+        <img src="assets/home-project-logo.png" alt="Home Project">
+        <span class="status">online</span>
+      </div>
+    </header>
+
+    <section class="intro">
+      <h1>Vamos conversar sobre seu ambiente?</h1>
+      <p>Escolha um canal abaixo para falar direto com a Home Project.</p>
+    </section>
+
+    <section class="chat" aria-label="Canais clicaveis">
+      <div class="bubble home">Olá, eu sou a Lara, assistente da Home Project. Posso te direcionar pelo canal que preferir.</div>
+      <div class="bubble client">Quero falar com a Home Project.</div>
+
+      <nav class="actions" aria-label="Links principais">
+        <a class="action whatsapp" href="https://wa.me/5533999919651?text=Ol%C3%A1%2C%20Lara.%20Gostaria%20de%20conversar%20com%20a%20Home%20Project." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21a8.9 8.9 0 0 1-4.32-1.12L3 21l1.2-4.5A9 9 0 1 1 12 21Z" stroke="currentColor" stroke-width="2"/><path d="M8.7 8.4c.2-.45.38-.47.68-.47h.5c.18 0 .44.07.68.54.25.58.82 2 .9 2.14.07.16.12.34.02.54-.15.31-.3.45-.54.72-.14.14-.3.3-.12.6.18.3.78 1.28 1.68 2.07 1.16 1.03 2.07 1.35 2.38 1.5.3.16.48.14.66-.08.2-.22.76-.88.96-1.18.2-.3.4-.25.68-.15.28.1 1.78.84 2.08 1 .3.15.5.22.58.34.08.12.08.7-.16 1.36-.24.66-1.38 1.28-1.94 1.36-.5.08-1.14.12-1.84-.12-.42-.14-.96-.32-1.66-.62-2.92-1.26-4.82-4.18-4.96-4.38-.14-.2-1.18-1.56-1.18-2.98 0-1.42.74-2.12 1-2.38Z" fill="currentColor"/></svg>
+          WhatsApp da Lara <span>abre conversa direta com mensagem pronta</span>
+        </a>
+
+        <a class="action instagram" href="https://www.instagram.com/homeprojectplanejados/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg>
+          Instagram <span>@homeprojectplanejados</span>
+        </a>
+
+        <a class="action site" href="https://isaquegf-debug.github.io/home-project-site/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3.5 12h17M12 3c2.4 2.7 3.6 5.7 3.6 9S14.4 18.3 12 21c-2.4-2.7-3.6-5.7-3.6-9S9.6 5.7 12 3Z" stroke="currentColor" stroke-width="2"/></svg>
+          Página da Home Project <span>abre o site oficial</span>
+        </a>
+
+        <a class="action email" href="mailto:loja@homeproject.com.br?subject=Contato%20pelo%20cart%C3%A3o%20digital%20Home%20Project">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2"/></svg>
+          E-mail <span>loja@homeproject.com.br</span>
+        </a>
+
+        <a class="action phone" href="tel:+5533999919651">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5 6 7c-.6.6-.8 1.5-.5 2.3 1.7 4.4 4.8 7.5 9.2 9.2.8.3 1.7.1 2.3-.5l2-2-3-3-1.7 1.7c-2.2-1-4-2.8-5-5L11 8 8 5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          Ligar agora <span>(33) 99991-9651</span>
+        </a>
+
+        <a class="action contact" href="home-project-contato.vcf">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2"/><path d="M9 10h6M9 14h6M8 20v-3h8v3" stroke="currentColor" stroke-width="2"/></svg>
+          Salvar contato <span>baixa o cartão para agenda do celular</span>
+        </a>
+      </nav>
+    </section>
+
+    <section class="details" aria-label="Contatos em texto">
+      <div class="line"><strong>WhatsApp</strong><a href="https://wa.me/5533999919651" target="_blank" rel="noopener noreferrer">(33) 99991-9651</a></div>
+      <div class="line"><strong>Instagram</strong><a href="https://www.instagram.com/homeprojectplanejados/" target="_blank" rel="noopener noreferrer">@homeprojectplanejados</a></div>
+      <div class="line"><strong>Site</strong><a href="https://isaquegf-debug.github.io/home-project-site/" target="_blank" rel="noopener noreferrer">isaquegf-debug.github.io/home-project-site/</a></div>
+      <div class="line"><strong>E-mail</strong><a href="mailto:loja@homeproject.com.br">loja@homeproject.com.br</a></div>
+    </section>
+
+    <footer>
+      <strong>Home Project</strong>
+      <span>Divisa Alegre - MG, Brasil</span>
+    </footer>
+  </main>
+</body>
+</html>
