@@ -1,0 +1,16 @@
+{
+  "name": "Home Project",
+  "short_name": "Home Project",
+  "description": "Projetos, interiores e gestão de soluções para residências e empresas.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fbfaf6",
+  "theme_color": "#1e211f",
+  "icons": [
+    {
+      "src": "assets/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

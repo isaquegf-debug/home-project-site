@@ -3,19 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A Home Project projeta, planeja e administra soluções para residências e empresas.">
+  <meta name="description" content="Projetos de interiores, móveis planejados, reformas e gestão de soluções para residências e empresas com atendimento pela Home Project.">
   <meta name="theme-color" content="#1e211f">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Home Project | Projetos e Gestão de Soluções">
-  <meta property="og:description" content="Projetamos, planejamos e administramos soluções para residências e empresas.">
-  <meta property="og:image" content="assets/hero-home-project.png">
-  <meta property="og:url" content="https://homeproject.com.br/">
-  <link rel="canonical" href="https://homeproject.com.br/">
-  <title>Home Project | Projetos e Gestão de Soluções</title>
+  <meta property="og:title" content="Home Project | Projetos, Interiores e Gestão de Obras">
+  <meta property="og:description" content="Projetos de interiores, móveis planejados, reformas e gestão de soluções para residências e empresas.">
+  <meta property="og:image" content="https://isaquegf-debug.github.io/home-project-site/assets/hero-home-project.png">
+  <meta property="og:url" content="https://isaquegf-debug.github.io/home-project-site/">
+  <link rel="canonical" href="https://isaquegf-debug.github.io/home-project-site/">
+  <title>Home Project | Projetos, Interiores e Gestão de Obras</title>
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/favicon-192.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" as="image" href="assets/hero-home-project.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Home Project",
+  "url": "https://isaquegf-debug.github.io/home-project-site/",
+  "email": "loja@homeproject.com.br",
+  "telephone": "+5533999919651",
+  "areaServed": "Divisa Alegre, MG e região",
+  "sameAs": ["https://www.instagram.com/homeprojectplanejados/"]
+}
+</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -38,7 +54,11 @@
 
   <main>
     <section class="hero">
-      <img class="hero-image" src="assets/hero-home-project.png" alt="Ambiente contemporâneo planejado com materiais naturais">
+      <picture class="hero-picture">
+        <source media="(max-width: 700px)" srcset="assets/hero-home-project-mobile.webp" type="image/webp">
+        <source srcset="assets/hero-home-project.webp" type="image/webp">
+        <img class="hero-image" src="assets/hero-home-project.png" alt="Ambiente contemporâneo planejado com materiais naturais" width="1672" height="941" fetchpriority="high">
+      </picture>
       <div class="hero-shade"></div>
       <div class="hero-content">
         <p class="eyebrow">Projetos e gestão de soluções para imóveis</p>
@@ -111,7 +131,10 @@
 
     <section class="method section" id="metodo">
       <div class="method-media reveal">
-        <img src="assets/processo-planejamento.png" alt="Profissionais analisando plantas, materiais e planejamento">
+        <picture>
+          <source srcset="assets/processo-planejamento.webp" type="image/webp">
+          <img src="assets/processo-planejamento.png" alt="Profissionais analisando plantas, materiais e planejamento" width="1448" height="1086" loading="lazy" decoding="async">
+        </picture>
         <div class="media-label">Planejamento que antecipa decisões</div>
       </div>
       <div class="method-content">
@@ -149,7 +172,10 @@
         </div>
       </div>
       <div class="result-media">
-        <img src="assets/resultado-corporativo.png" alt="Escritório corporativo contemporâneo concluído">
+        <picture>
+          <source srcset="assets/resultado-corporativo.webp" type="image/webp">
+          <img src="assets/resultado-corporativo.png" alt="Escritório corporativo contemporâneo concluído" width="1536" height="1024" loading="lazy" decoding="async">
+        </picture>
       </div>
     </section>
 
@@ -262,6 +288,6 @@
     <small>© <span id="year"></span> Home Project. Todos os direitos reservados.</small>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

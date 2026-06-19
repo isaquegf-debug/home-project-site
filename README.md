@@ -19,3 +19,11 @@ Execute `ABRIR_AMOSTRA.cmd` ou abra `index.html` no navegador.
 - Incluir projetos reais e depoimentos aprovados quando estiverem selecionados.
 - Configurar analytics somente após definir a ferramenta e o consentimento necessário.
 - Apontar o dominio `homeproject.com.br` para a hospedagem escolhida.
+
+## Melhorias aplicadas em 2026-06-19
+
+- SEO ajustado para a URL publicada no GitHub Pages.
+- Imagens principais convertidas para WebP e carregamento otimizado.
+- Adicionados favicon, manifest, robots.txt e sitemap.xml.
+- WhatsApp passou a indicar origem pelo site nas respostas rapidas.
+- Scripts com protecoes para evitar erro caso algum elemento nao exista.
