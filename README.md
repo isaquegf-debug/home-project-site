@@ -27,3 +27,5 @@ Execute `ABRIR_AMOSTRA.cmd` ou abra `index.html` no navegador.
 - Adicionados favicon, manifest, robots.txt e sitemap.xml.
 - WhatsApp passou a indicar origem pelo site nas respostas rapidas.
 - Scripts com protecoes para evitar erro caso algum elemento nao exista.
+
+- Portfólio inicial adicionado com frentes de atuação e imagens institucionais seguras, aguardando curadoria de projetos reais.

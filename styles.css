@@ -88,6 +88,21 @@ button { font: inherit; }
 .solution-card p { color:#6a6e69; margin:0; max-width:440px; }
 .card-icon { justify-self:end; width:54px; height:54px; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; font-size:24px; }
 
+
+.portfolio { background:var(--ivory); }
+.portfolio-grid { display:grid; grid-template-columns:1.15fr .85fr .85fr; gap:18px; align-items:stretch; }
+.portfolio-card { background:var(--paper); border:1px solid var(--line); display:flex; flex-direction:column; min-height:100%; }
+.portfolio-card picture { aspect-ratio:4/3; width:100%; overflow:hidden; background:#ddd5c7; }
+.portfolio-card.featured picture { aspect-ratio:16/10; }
+.portfolio-card img { width:100%; height:100%; object-fit:cover; transition:transform .28s ease; }
+.portfolio-card:hover img { transform:scale(1.035); }
+.portfolio-card div { padding:24px; }
+.portfolio-card span { display:block; color:var(--bronze); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; }
+.portfolio-card h3 { margin:0; font-family:var(--serif); font-size:clamp(26px,2.7vw,38px); line-height:1.08; font-weight:500; }
+.portfolio-card p { margin:16px 0 0; color:#6a6e69; font-size:15px; }
+.portfolio-cta { margin-top:28px; padding-top:24px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:22px; align-items:center; }
+.portfolio-cta p { margin:0; color:#5c625d; font-size:17px; }
+.button-dark { background:var(--ink); color:white; }
 .method { display:grid; grid-template-columns:1.08fr .92fr; padding:0; background:var(--ivory); }
 .method-media { position:relative; min-height:860px; overflow:hidden; }
 .method-media picture, .method-media img { width:100%; height:100%; }
@@ -182,6 +197,8 @@ button { font: inherit; }
   .hero-content { width:84vw; }
   .hero-note { display:none; }
   .manifesto-grid, .method, .result, .lara, .faq { grid-template-columns:1fr; }
+  .portfolio-grid { grid-template-columns:1fr; }
+  .portfolio-cta { align-items:flex-start; flex-direction:column; }
   .section-heading { align-items:start; flex-direction:column; }
   .solution-card { grid-template-columns:45px 1fr 60px; padding:24px 0; }
   .solution-card p { grid-column:2/4; }
