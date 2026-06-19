@@ -45,3 +45,35 @@ if (floatingContact && footer && "IntersectionObserver" in window) {
 
   footerObserver.observe(footer);
 }
+const portfolioFilters = document.querySelectorAll(".portfolio-filter button");
+const portfolioCards = document.querySelectorAll(".portfolio-card[data-category]");
+
+portfolioFilters.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+    portfolioFilters.forEach((item) => item.classList.remove("is-active"));
+    button.classList.add("is-active");
+    portfolioCards.forEach((card) => {
+      card.classList.toggle("is-hidden", filter !== "todos" && card.dataset.category !== filter);
+    });
+  });
+});
+
+const briefingForm = document.querySelector("#briefing-form");
+
+if (briefingForm) {
+  briefingForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(briefingForm);
+    const lines = [
+      "Olá, Lara. Vim pelo site da Home Project e gostaria de enviar um pré-briefing.",
+      `Nome: ${data.get("nome") || "não informado"}`,
+      `Cidade: ${data.get("cidade") || "não informada"}`,
+      `Tipo de imóvel: ${data.get("imovel")}`,
+      `Necessidade: ${data.get("necessidade")}`,
+      `Prazo: ${data.get("prazo")}`,
+      `Resumo: ${data.get("resumo") || "não informado"}`
+    ];
+    window.open(`https://wa.me/5533999919651?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener,noreferrer");
+  });
+}

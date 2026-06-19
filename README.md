@@ -29,3 +29,6 @@ Execute `ABRIR_AMOSTRA.cmd` ou abra `index.html` no navegador.
 - Scripts com protecoes para evitar erro caso algum elemento nao exista.
 
 - Portfólio inicial adicionado com frentes de atuação e imagens institucionais seguras, aguardando curadoria de projetos reais.
+
+- Serviços detalhados, filtros de portfólio, páginas individuais e formulário de pré-briefing pelo WhatsApp adicionados.
+- Depoimentos e fotos reais continuam pendentes de autorização explícita antes de publicação.

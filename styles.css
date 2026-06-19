@@ -89,6 +89,38 @@ button { font: inherit; }
 .card-icon { justify-self:end; width:54px; height:54px; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; font-size:24px; }
 
 
+
+.services { background:var(--paper); }
+.service-grid { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px; }
+.service-grid article { border:1px solid var(--line); background:var(--ivory); padding:24px; min-height:260px; display:flex; flex-direction:column; }
+.service-grid span { color:var(--bronze); font-size:12px; font-weight:600; letter-spacing:.14em; }
+.service-grid h3 { margin:42px 0 14px; font-family:var(--serif); font-size:30px; line-height:1.08; font-weight:500; }
+.service-grid p { margin:0; color:#6a6e69; font-size:15px; }
+.portfolio-filter { display:flex; gap:8px; flex-wrap:wrap; margin:-40px 0 24px; }
+.portfolio-filter button { border:1px solid var(--line); background:transparent; padding:10px 14px; color:var(--ink); cursor:pointer; font-size:13px; }
+.portfolio-filter button.is-active, .portfolio-filter button:hover { background:var(--ink); color:white; border-color:var(--ink); }
+.portfolio-card.is-hidden { display:none; }
+.portfolio-link { display:inline-block; margin-top:18px; color:var(--ink); border-bottom:1px solid var(--bronze); font-size:13px; font-weight:600; }
+.briefing { background:#e8e2d8; display:grid; grid-template-columns:.8fr 1.2fr; gap:8vw; align-items:start; }
+.briefing-copy h2 { margin:0; font-family:var(--serif); font-size:clamp(42px,5vw,68px); font-weight:500; line-height:1.08; }
+.briefing-copy p:not(.section-kicker) { color:#606560; max-width:520px; margin:28px 0 0; }
+.briefing-form { display:grid; grid-template-columns:1fr 1fr; gap:12px; background:var(--paper); padding:24px; border:1px solid var(--line); }
+.briefing-form label { display:grid; gap:6px; color:#5c625d; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; }
+.briefing-form input, .briefing-form select, .briefing-form textarea { width:100%; border:1px solid var(--line); background:white; color:var(--ink); padding:12px; font:inherit; font-size:14px; text-transform:none; letter-spacing:0; }
+.briefing-form textarea { resize:vertical; }
+.briefing-form .full, .briefing-form button { grid-column:1/-1; }
+.project-page { background:var(--paper); }
+.project-hero { min-height:68vh; display:grid; grid-template-columns:.8fr 1.2fr; background:var(--ink); color:white; }
+.project-hero-copy { padding:120px 8vw 80px; display:flex; flex-direction:column; justify-content:center; }
+.project-hero-copy h1 { margin:0; font-family:var(--serif); font-size:clamp(48px,6vw,84px); line-height:1; font-weight:500; }
+.project-hero-copy p { color:rgba(255,255,255,.72); font-size:18px; max-width:560px; }
+.project-hero-media img, .project-hero-media picture { width:100%; height:100%; object-fit:cover; }
+.project-detail { padding:90px 8vw; display:grid; grid-template-columns:1fr 1fr 1fr; gap:28px; }
+.project-detail article { border-top:1px solid var(--line); padding-top:22px; }
+.project-detail h2 { font-family:var(--serif); font-weight:500; font-size:30px; margin:0 0 12px; }
+.project-detail p { color:#666b66; margin:0; }
+.project-back { padding:0 8vw 90px; }
+.project-back a { border-bottom:1px solid var(--bronze); }
 .portfolio { background:var(--ivory); }
 .portfolio-grid { display:grid; grid-template-columns:1.15fr .85fr .85fr; gap:18px; align-items:stretch; }
 .portfolio-card { background:var(--paper); border:1px solid var(--line); display:flex; flex-direction:column; min-height:100%; }
@@ -197,8 +229,10 @@ button { font: inherit; }
   .hero-content { width:84vw; }
   .hero-note { display:none; }
   .manifesto-grid, .method, .result, .lara, .faq { grid-template-columns:1fr; }
-  .portfolio-grid { grid-template-columns:1fr; }
+  .portfolio-grid, .service-grid, .briefing, .project-hero, .project-detail { grid-template-columns:1fr; }
   .portfolio-cta { align-items:flex-start; flex-direction:column; }
+  .briefing-form { grid-template-columns:1fr; }
+  .project-hero-copy { padding:100px 6vw 70px; }
   .section-heading { align-items:start; flex-direction:column; }
   .solution-card { grid-template-columns:45px 1fr 60px; padding:24px 0; }
   .solution-card p { grid-column:2/4; }

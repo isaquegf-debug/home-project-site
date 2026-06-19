@@ -44,10 +44,12 @@
     </button>
     <nav class="site-nav" aria-label="Navegação principal">
       <a href="#solucoes">Soluções</a>
+      <a href="#servicos">Serviços</a>
       <a href="#portfolio">Portfólio</a>
       <a href="#metodo">Como trabalhamos</a>
       <a href="#resultado">Resultados</a>
       <a href="#duvidas">Dúvidas</a>
+      <a href="#briefing">Briefing</a>
       <a href="https://www.instagram.com/homeprojectplanejados/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="#lara" class="nav-cta">Falar com a Lara</a>
     </nav>
@@ -131,6 +133,22 @@
     </section>
 
 
+
+    <section class="services section" id="servicos" aria-labelledby="services-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Serviços</p>
+          <h2 id="services-title">Escolha o tipo de apoio que seu projeto precisa.</h2>
+        </div>
+        <p>Do primeiro estudo ao acompanhamento da execução, o atendimento é estruturado conforme escopo, urgência e nível de detalhe necessário.</p>
+      </div>
+      <div class="service-grid">
+        <article><span>01</span><h3>Projeto de interiores</h3><p>Layout, conceito visual, materiais, iluminação e composição dos ambientes.</p></article>
+        <article><span>02</span><h3>Móveis planejados</h3><p>Levantamento, solução funcional, apoio na escolha de acabamentos e integração com o ambiente.</p></article>
+        <article><span>03</span><h3>Reformas e obras</h3><p>Organização de etapas, decisões, fornecedores, cronograma e acompanhamento técnico.</p></article>
+        <article><span>04</span><h3>Consultoria e melhorias</h3><p>Direcionamento pontual para resolver dúvidas, adequar espaços ou planejar próximos passos.</p></article>
+      </div>
+    </section>
     <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
       <div class="section-heading">
         <div>
@@ -139,8 +157,14 @@
         </div>
         <p>Uma seleção inicial de frentes de atuação da Home Project. Imagens reais de clientes entram aqui somente depois da curadoria e autorização de uso.</p>
       </div>
+      <div class="portfolio-filter" aria-label="Filtrar portfólio">
+        <button type="button" class="is-active" data-filter="todos">Todos</button>
+        <button type="button" data-filter="comercial">Comercial</button>
+        <button type="button" data-filter="planejamento">Planejamento</button>
+        <button type="button" data-filter="residencial">Residencial</button>
+      </div>
       <div class="portfolio-grid">
-        <article class="portfolio-card featured">
+        <article class="portfolio-card featured" data-category="comercial">
           <picture>
             <source srcset="assets/resultado-corporativo.webp" type="image/webp">
             <img src="assets/resultado-corporativo.png" alt="Ambiente corporativo contemporâneo finalizado" width="1536" height="1024" loading="lazy" decoding="async">
@@ -279,6 +303,23 @@
       </div>
     </section>
 
+
+    <section class="briefing section" id="briefing" aria-labelledby="briefing-title">
+      <div class="briefing-copy">
+        <p class="section-kicker">Pré-briefing</p>
+        <h2 id="briefing-title">Envie o essencial antes da primeira conversa.</h2>
+        <p>Preencha o formulário e ele monta uma mensagem para a Lara no WhatsApp. Nenhum dado fica salvo no site; tudo é enviado somente quando você confirma a conversa.</p>
+      </div>
+      <form class="briefing-form" id="briefing-form">
+        <label>Nome<input name="nome" autocomplete="name" placeholder="Seu nome"></label>
+        <label>Cidade<input name="cidade" autocomplete="address-level2" placeholder="Cidade/UF"></label>
+        <label>Tipo de imóvel<select name="imovel"><option>Residencial</option><option>Comercial</option><option>Consultório / clínica</option><option>Outro</option></select></label>
+        <label>Necessidade<select name="necessidade"><option>Projeto de interiores</option><option>Móveis planejados</option><option>Obra ou reforma</option><option>Reparo ou melhoria</option><option>Ainda não sei</option></select></label>
+        <label>Prazo<select name="prazo"><option>Quero começar em breve</option><option>Estou planejando para os próximos meses</option><option>Preciso entender etapas e valores</option></select></label>
+        <label class="full">Resumo<textarea name="resumo" rows="4" placeholder="Conte rapidamente o ambiente, objetivo ou problema que precisa resolver."></textarea></label>
+        <button class="button button-dark" type="submit">Enviar briefing pelo WhatsApp</button>
+      </form>
+    </section>
     <section class="lara section" id="lara">
       <div class="lara-intro">
         <p class="section-kicker">Seu primeiro atendimento</p>
