@@ -18,7 +18,7 @@ if (menuButton && navigation) {
 document.querySelectorAll(".quick-options button").forEach((button) => {
   button.addEventListener("click", () => {
     const message = encodeURIComponent(
-      `Olá, Lara. Vim pelo site da Home Project e gostaria de conversar sobre: ${button.textContent.trim()}.`
+      `Olá. Vim pelo site da Home Project e gostaria de conversar sobre: ${button.textContent.trim()}.`
     );
     const laraLink = document.querySelector("#lara-link");
     if (laraLink) {
@@ -66,7 +66,7 @@ if (briefingForm) {
     event.preventDefault();
     const data = new FormData(briefingForm);
     const lines = [
-      "Olá, Lara. Vim pelo site da Home Project e gostaria de enviar um pré-briefing.",
+      "Olá. Vim pelo site da Home Project e gostaria de enviar um pré-briefing.",
       `Nome: ${data.get("nome") || "não informado"}`,
       `Cidade: ${data.get("cidade") || "não informada"}`,
       `Tipo de imóvel: ${data.get("imovel")}`,
